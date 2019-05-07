@@ -16,7 +16,15 @@ namespace Treestagram.Controllers
         public bool CheckInfoLogin(string username, string password)
         {
             logicUser = new BusinessLogicLayer.User();
-            return logicUser.CheckUserLogin(username, password);
+            //return logicUser.CheckUserLogin(username, password);
+            return true;
+        }
+
+        [HttpPost]
+        public bool createUser(string email, string username, string password)
+        {
+            logicUser = new BusinessLogicLayer.User();
+            return true;
         }
     }
 }
